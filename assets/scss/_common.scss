@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: $font-size;
+  font-family: $font-main;
+  overflow-y: scroll;
+  letter-spacing: 0.1em;
+}
+h1 {
+  font-family: $font-header;
+  font-weight: 300;
+  font-size: 3.75rem;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+
+  @include md {
+    font-size: 1.875rem; 
+  }
+}
+a{
+  color: $color-light;
+  text-decoration: none;
+}
+.btn {
+  border: 2px solid $color-light;
+  background-color: rgba($color-light, 0.1);
+  @extend %btn-common;
+  @include lg-min {
+    height: 60px;
+    padding: 18px $gap;
+    font-size: 1.125rem;
+    min-width: 250px;
+  }
+  @include lg-md {
+    height: 50px;
+    padding: 14px $gap;
+    font-size: 1rem;
+    min-width: 200px;
+  }
+  @include md {
+    height: 40px;
+    padding: 9px $gap;
+    min-width: 170px;
+  }
+}
+.btn__accent {
+  @extend %btn-common;
+  font-size: 1.125rem;
+  padding: 18px $gap;
+  height: 60px;
+  border: 2px solid $color-primary;
+  background-color: rgba($color-primary, 0.8);
+  
+  @include sm-min {
+    min-width: 350px;
+  }
+  @include sm {
+    width: 100%;
+  }
+}
