@@ -1,16 +1,16 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   font-size: $font-size;
   font-family: $font-main;
-  overflow-y: scroll;
   letter-spacing: 0.1em;
 }
+
 h1 {
   font-family: $font-header;
   font-weight: 300;
-  font-size: 3.75rem;
   letter-spacing: 0.08em;
   line-height: 1.2;
 
@@ -26,10 +26,43 @@ h1 {
     font-size: 1.875rem; 
   }
 }
+
+h2 {
+  font-family: $font-header;
+  color: $color-primary;
+  letter-spacing: 0.1em;
+  margin-top: 0;
+  
+  @include lg-min {
+    margin-bottom: 56px;
+    line-height: 48px;
+    font-size: 2.5rem;
+  }
+  
+  @include lg-md {
+    margin-bottom: 42px;
+    line-height: 40px;
+    font-size: 2rem;
+  } 
+  
+  @include md-sm {
+    margin-bottom: 36px;
+    line-height: 32px;
+    font-size: 1.5rem; 
+  }
+  @include sm {
+    margin-bottom: 36px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 1.5rem; 
+  }
+}
+
 a{
   color: $color-light;
   text-decoration: none;
 }
+
 .btn {
   border: 2px solid $color-light;
   background-color: rgba($color-light, 0.1);
@@ -52,6 +85,7 @@ a{
     min-width: 170px;
   }
 }
+
 .btn__accent {
   @extend %btn-common;
   font-size: 1.125rem;

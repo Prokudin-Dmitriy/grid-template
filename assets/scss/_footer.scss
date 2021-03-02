@@ -1,0 +1,62 @@
+.footer {
+  background-color: $color-primary;
+  color: $color-light;
+  padding: $gap * 2.5 $gap $gap * 3.5;
+
+  &__container {
+    @extend %container;
+  }
+  
+  &__social {
+    position: relative;
+    font-weight: 400;
+    margin-bottom: $gap * 2;
+    justify-content: center;
+    display: grid;
+    grid-template-areas: "e1 e2 e3 e4 e5";
+    
+    &::after {
+      position: absolute;
+      bottom: -20px;
+      left: calc(50% - 75px / 2);
+      width: 75px;
+      height: 2px;
+      content: "";
+      background-color: rgba($color-light, 0.1);
+    }
+  }
+  
+  &__link{
+    letter-spacing: normal;
+    padding: $gap / 2;
+    grid-template-columns: repeat(5, 1fr);
+    transition: color 0.5s;
+    
+    i {
+      font-size: 2.25rem;
+    }
+    
+    &:active,
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__copy {
+    text-align: center;
+    
+    div {
+      &:first-of-type {
+        letter-spacing: 0.33em;
+        color: $color-gray;
+        font-weight: 100;
+        margin-right: -0.5em;
+      }
+      &:last-of-type {
+        letter-spacing: 0.05em;
+        color: $color-gray-light;
+        font-weight: 700;
+      }
+    }
+  }
+}

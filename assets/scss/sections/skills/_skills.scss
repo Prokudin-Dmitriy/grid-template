@@ -12,7 +12,7 @@
     margin-bottom: $gap;
     
     @media (min-height: 691px) {
-      grid-auto-rows: calc(33.333vh - #{$gap} / 3);
+      grid-auto-rows: calc(33.333vh - #{$gap} / 1.5);
     }
   
     @media (max-height: 690px) {
